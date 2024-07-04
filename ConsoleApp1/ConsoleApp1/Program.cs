@@ -34,7 +34,11 @@ namespace ConsoleApp1
             point++;
 
             Console.WriteLine(point);
-        
+
+            ++point;
+
+            Console.WriteLine(point);
+
         }
     }
 
