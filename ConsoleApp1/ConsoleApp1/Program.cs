@@ -28,6 +28,35 @@ namespace ConsoleApp1
 
 
             Person p = new Person { Name = "Kostia", Age = new DateTime(2000, 1, 10) };
+
+            Point point = new Point(10, 20);
+
+            point++;
+
+            Console.WriteLine(point);
+        
+        }
+    }
+
+    class Point
+    {
+        int x, y;
+        public Point(int x, int y)
+        {
+            this.x = x;
+            this.y = y;
+        }
+
+        public static Point operator ++(Point p)
+        {
+            p.x++;
+            p.y++;
+            return p;
+        }
+
+        public override string ToString()
+        {
+            return x + " " + y;
         }
     }
 }
