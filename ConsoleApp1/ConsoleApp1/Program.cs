@@ -6,6 +6,11 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp1
 {
+    class Person
+    {
+        public string Name { set; get; }
+        public DateTime Age { set; get; }
+    }
     class Program
     {
         static int Min(int a, int b)
@@ -20,6 +25,9 @@ namespace ConsoleApp1
             b = int.Parse(Console.ReadLine());
 
             Console.WriteLine(Min(a, b));
+
+
+            Person p = new Person { Name = "Kostia", Age = new DateTime(2000, 1, 10) };
         }
     }
 }
