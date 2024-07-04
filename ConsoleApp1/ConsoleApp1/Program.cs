@@ -39,6 +39,11 @@ namespace ConsoleApp1
 
             Console.WriteLine(point);
 
+            Point point2 = new Point(50, 60);
+
+            Point point3 = point + point2;
+
+            Console.WriteLine(point3);
         }
     }
 
@@ -55,6 +60,14 @@ namespace ConsoleApp1
         {
             p.x++;
             p.y++;
+            return p;
+        }
+
+        public static Point operator + (Point p1, Point p2)
+        {
+            Point p = new Point(p1.x, p1.y);
+            p.x += p2.x;
+            p.y += p2.y;
             return p;
         }
 
